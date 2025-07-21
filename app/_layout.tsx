@@ -1,5 +1,5 @@
 
-  import '../global.css';
+import '../global.css';
 
 
 
@@ -15,24 +15,16 @@ import { Stack } from 'expo-router';
 
 
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: "(drawer)",
+  // Set Signup as the initial route.
+  initialRouteName: "Signup",
 };
 
 export default function RootLayout() {
-  
-  
-
-  	return (
-    	
-        <GestureHandlerRootView style={{ flex: 1 }}>
-         
-          <Stack>
-        
-            <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
-            <Stack.Screen name="modal" options={{ title: 'Modal', presentation: 'modal' }} />
-          </Stack>
-        </GestureHandlerRootView>
-      
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack>
+        <Stack.Screen name="Signup" options={{ headerShown: false }} />
+      </Stack>
+    </GestureHandlerRootView>
   );
 }
